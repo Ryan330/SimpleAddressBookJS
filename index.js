@@ -1,10 +1,13 @@
 //Init Express.js
 const express = require("express");
 const app = express();
+const static = express.static;
 const expressHbs = require("express-handlebars");
 
 app.engine(".hbs", expressHbs({defaultLayout: "layout", extname: ".hbs"}));
 app.set("view engine", ".hbs");
+
+app.use(static("public"));
 
 //Init Contacts Data
 const contacts = require("./contacts.json");
