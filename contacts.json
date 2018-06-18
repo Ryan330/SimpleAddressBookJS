@@ -2,14 +2,14 @@
     "users": [
       {
         "id": "1f09fbeod",
-        "firstName": "Chris",
-        "lastName": "Aquino",
+        "firstName": "Chris the",
+        "lastName": "Aquino of All Aquinos",
         "phone": "6781234567",
         "email": "ihateradishes@gmail.com"
       },
       {
         "id": "v09erbnd",
-        "firstName": "Jonathan",
+        "firstName": "Joshua (I Could Have Sworn It Was Jonathan)",
         "lastName": "Martin",
         "phone": "4041234567",
         "email": "ilovecheesecake@gmail.com"
@@ -17,9 +17,16 @@
       {
         "id": "boifudsf5",
         "firstName": "Jake",
-        "lastName": "Hadden",
+        "lastName": "Hadden aka (The Jakester)",
         "phone": "1234567890",
         "email": "jakelovesjava@gmail.com"
+      },
+      {
+        "id": "jfdi84qm",
+        "firstName": "Oakley",
+        "lastName": "the Cat",
+        "phone": "5929008342",
+        "email": "theradishdudescat@gmail.com"
       }
     ]
   }

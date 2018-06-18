@@ -14,8 +14,7 @@ const contacts = require("./contacts.json");
 //User Welcome Message
 app.get("/", function(request, response) {
     response.render("home", {
-        message: "Welcome to the ContactsApp home page!",
-        footerContent: "Footer Stuffs"
+        message: "ContactsApp"
     });
 });
 
@@ -23,7 +22,9 @@ app.get("/", function(request, response) {
 //Contacts List
 //User Data
 app.get("/contacts", function(request, response) {
-    response.send(contacts.users);
+    response.render("contacts-list", {
+        contactsArray: contacts.users
+    });
 });
 
 //User IDs
