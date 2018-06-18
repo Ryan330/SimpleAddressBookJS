@@ -14,6 +14,7 @@ const contacts = require("./contacts.json");
 //User Welcome Message
 app.get("/", function(request, response) {
     response.render("home", {
+        layout: "homepage",
         message: "ContactsApp"
     });
 });
@@ -33,12 +34,16 @@ app.get("/contacts/:id", function(request, response) {
     let contact = contacts.users.find(function(user) {
         return user.id === id;
     });
-    if (!contact) {
-        contact = "User does not exist!";
+
+    //Error Message
+    if (contact) {
+        response.render("contact-detail", {
+            contact
+        });
     }
-    else {response.render("contact-details", {
-        contact
-    })};
+    else {
+        response.send(`${id} Does Not Exist!`);
+    }
 });
 
 //Contacts Details
