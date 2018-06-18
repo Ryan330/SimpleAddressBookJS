@@ -4,10 +4,24 @@ const app = express();
 
 
 //Application Function
-app.get("/", function (request, response) {
-    response.send("Hello there.");
+//User Welcome Message
+app.get("/", function(request, response) {
+    response.send("Hello, welcome to ContactsApp!");
 });
 
-app.listen(8888, function () {
+
+//Contacts List
+app.get("/contacts", function(request, response) {
+    response.send("Welcome to the listing page!");
+});
+
+//Contacts Details
+app.get("/contacts/:id", function(request, response) {
+    response.send(`You are viewing details ${request.params.id}`);
+});
+
+
+//Server Port
+app.listen(8888, function() {
     console.log("Your express app is running at http://localhost:8888");
 });
