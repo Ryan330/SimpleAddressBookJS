@@ -36,7 +36,9 @@ app.get("/contacts/:id", function(request, response) {
     if (!contact) {
         contact = "User does not exist!";
     }
-    else {response.send(contact)};
+    else {response.render("contact-details", {
+        contact
+    })};
 });
 
 //Contacts Details
